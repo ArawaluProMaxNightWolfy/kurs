@@ -1,0 +1,45 @@
+\begin{theindex}
+
+  \item {$\sim$WorkWithClient}
+    \subitem {WorkWithClient}, \hyperpage{7}
+
+  \indexspace
+
+  \item {checID}
+    \subitem {WorkWithClient}, \hyperpage{7}
+  \item {checparol}
+    \subitem {WorkWithClient}, \hyperpage{7}
+  \item {count}
+    \subitem {WorkWithClient}, \hyperpage{8}
+
+  \indexspace
+
+  \item {errrecord}
+    \subitem {WorkWithClient}, \hyperpage{8}
+
+  \indexspace
+
+  \item {inttohex}
+    \subitem {WorkWithClient}, \hyperpage{8}
+
+  \indexspace
+
+  \item {main.cpp}, \hyperpage{11}
+  \item {makesalt}
+    \subitem {WorkWithClient}, \hyperpage{9}
+  \item {mdfile.cpp}, \hyperpage{12}
+  \item {mdfile.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {WorkWithClient}, \hyperpage{5}
+    \subitem {$\sim$WorkWithClient}, \hyperpage{7}
+    \subitem {checID}, \hyperpage{7}
+    \subitem {checparol}, \hyperpage{7}
+    \subitem {count}, \hyperpage{8}
+    \subitem {errrecord}, \hyperpage{8}
+    \subitem {inttohex}, \hyperpage{8}
+    \subitem {makesalt}, \hyperpage{9}
+    \subitem {WorkWithClient}, \hyperpage{6}
+
+\end{theindex}

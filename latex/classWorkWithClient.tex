@@ -1,0 +1,211 @@
+\hypertarget{classWorkWithClient}{}\doxysection{Класс Work\+With\+Client}
+\label{classWorkWithClient}\index{WorkWithClient@{WorkWithClient}}
+
+
+Класс для работы с данными клиентов  
+
+
+
+
+{\ttfamily \#include $<$mdfile.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWorkWithClient_a5111e6a63ad584d80aebc92863137d23}\label{classWorkWithClient_a5111e6a63ad584d80aebc92863137d23}} 
+\mbox{\hyperlink{classWorkWithClient_a5111e6a63ad584d80aebc92863137d23}{Work\+With\+Client}} ()=delete
+\begin{DoxyCompactList}\small\item\em запрет конструктора без параметров \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorkWithClient_a2ec96ed216f3ee51103814a20ac5c13e}{Work\+With\+Client}} (const std\+::string bazep\+\_\+adr, const std\+::string ferr\+\_\+adr, const int n\+\_\+port)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorkWithClient_a1ba37f07a9686a9a87416b175ec1d73e}{$\sim$\+Work\+With\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWorkWithClient_a7bc9ae8f45d5b9f34bd122dce170f4f4}{makesalt}} ()
+\begin{DoxyCompactList}\small\item\em Формирование случайного числа \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWorkWithClient_a0ca1c026133e9d73601d5b1fdaf5586b}{chec\+ID}} (const std\+::string newid)
+\begin{DoxyCompactList}\small\item\em Проверка ID клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWorkWithClient_a77f8ad9f4ca94d614a1616491ba42553}{checparol}} (const std\+::string parol\+\_\+to\+\_\+chek)
+\begin{DoxyCompactList}\small\item\em Проверка пароля клиента \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classWorkWithClient_af127ae073917d570a6876ca26c044ff5}{count}} (const uint32\+\_\+t len, const uint64\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Перемножение значений вектора \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorkWithClient_ae6bfdaf5c6f03d00740c23c4629ee3ce}{errrecord}} (const std\+::string krit, const std\+::string reazon)
+\begin{DoxyCompactList}\small\item\em Запись ошибок в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classWorkWithClient_af21aca3ba1cf26ed618e9e095caebf8d}{inttohex}} (const uint64\+\_\+t decnum)
+\begin{DoxyCompactList}\small\item\em Преобразование числа из десятичной системы в шестнадцатеричную \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWorkWithClient_a3916fa9d07c6756c754c1b49ff116ddb}\label{classWorkWithClient_a3916fa9d07c6756c754c1b49ff116ddb}} 
+std\+::ofstream \mbox{\hyperlink{classWorkWithClient_a3916fa9d07c6756c754c1b49ff116ddb}{ferr}}
+\begin{DoxyCompactList}\small\item\em файл для записи ошибок \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWorkWithClient_ae689a92cc4544b30b3a0015c271a9fa5}\label{classWorkWithClient_ae689a92cc4544b30b3a0015c271a9fa5}} 
+std\+::string \mbox{\hyperlink{classWorkWithClient_ae689a92cc4544b30b3a0015c271a9fa5}{allclients}}
+\begin{DoxyCompactList}\small\item\em список всех клиентов и их паролей \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWorkWithClient_a3306639d183606fb27f82d370827aacb}\label{classWorkWithClient_a3306639d183606fb27f82d370827aacb}} 
+std\+::string \mbox{\hyperlink{classWorkWithClient_a3306639d183606fb27f82d370827aacb}{clientpar}}
+\begin{DoxyCompactList}\small\item\em пароль идентифицированного клиента \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWorkWithClient_a224279c709d5cfbe532375bb63d06884}\label{classWorkWithClient_a224279c709d5cfbe532375bb63d06884}} 
+std\+::string \mbox{\hyperlink{classWorkWithClient_a224279c709d5cfbe532375bb63d06884}{salt}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em переменная для хранения созданного случайного числа \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с данными клиентов 
+
+В классе реализованы функции для идентификации и аутификации клиентов, обработки присылаемых ими значений ~\newline
+ 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classWorkWithClient_a2ec96ed216f3ee51103814a20ac5c13e}\label{classWorkWithClient_a2ec96ed216f3ee51103814a20ac5c13e}} 
+\index{WorkWithClient@{WorkWithClient}!WorkWithClient@{WorkWithClient}}
+\index{WorkWithClient@{WorkWithClient}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{WorkWithClient()}{WorkWithClient()}}
+{\footnotesize\ttfamily Work\+With\+Client\+::\+Work\+With\+Client (\begin{DoxyParamCaption}\item[{const std\+::string}]{bazep\+\_\+adr,  }\item[{const std\+::string}]{ferr\+\_\+adr,  }\item[{const int}]{n\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+Конструктор открывает, считывает и закрывает файл базы клиентов; открывает файл для записи ошибок и проверяет выбранный порт. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em bazep\+\_\+adr} & Адрес файла с базой клиентов. Адрес может быть полным путем или относительным путем для подкаталогов папки сервера. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ferr\+\_\+adr} & Адрес файла для записи ошибок. Адрес может быть полным путем или относительным путем для подкаталогов папки сервера. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+port} & Номер порта, выбранного для сервера. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Предупреждения}
+Порты со значением от 1024 зарезервированы системными приложениями и являются недопустимыми 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Исключения}
+{\em string,если} & произошла ошибка открытия или чтения файла базы клиентов, ошибка открытия файла записи ошибок или выбранный порт меньше 1025 или больше 65535. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classWorkWithClient_a1ba37f07a9686a9a87416b175ec1d73e}\label{classWorkWithClient_a1ba37f07a9686a9a87416b175ec1d73e}} 
+\index{WorkWithClient@{WorkWithClient}!````~WorkWithClient@{$\sim$WorkWithClient}}
+\index{````~WorkWithClient@{$\sim$WorkWithClient}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{$\sim$WorkWithClient()}{~WorkWithClient()}}
+{\footnotesize\ttfamily Work\+With\+Client\+::$\sim$\+Work\+With\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор 
+
+Деструктор закрывает файл для записи ошибок. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classWorkWithClient_a0ca1c026133e9d73601d5b1fdaf5586b}\label{classWorkWithClient_a0ca1c026133e9d73601d5b1fdaf5586b}} 
+\index{WorkWithClient@{WorkWithClient}!checID@{checID}}
+\index{checID@{checID}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{checID()}{checID()}}
+{\footnotesize\ttfamily bool Work\+With\+Client\+::chec\+ID (\begin{DoxyParamCaption}\item[{const std\+::string}]{newid }\end{DoxyParamCaption})}
+
+
+
+Проверка ID клиента 
+
+Функция проверяет наличие переданного ID в списке клиентов и записывает в переменную clientpar соответствующий данному ID пароль. \begin{DoxyReturn}{Возвращает}
+true, если такой ID есть в списке и false, если его нет 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorkWithClient_a77f8ad9f4ca94d614a1616491ba42553}\label{classWorkWithClient_a77f8ad9f4ca94d614a1616491ba42553}} 
+\index{WorkWithClient@{WorkWithClient}!checparol@{checparol}}
+\index{checparol@{checparol}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{checparol()}{checparol()}}
+{\footnotesize\ttfamily bool Work\+With\+Client\+::checparol (\begin{DoxyParamCaption}\item[{const std\+::string}]{parol\+\_\+to\+\_\+chek }\end{DoxyParamCaption})}
+
+
+
+Проверка пароля клиента 
+
+Функция соединяет сформированное случайное число с паролем из файла, хеширует полученную строку функцией MD5 и сравниваеет полученную строку со строкой, переданной клиентом. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em parol\+\_\+to\+\_\+chek} & Строка, переданная клиентом. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если строки совпадают и false, если нет 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorkWithClient_af127ae073917d570a6876ca26c044ff5}\label{classWorkWithClient_af127ae073917d570a6876ca26c044ff5}} 
+\index{WorkWithClient@{WorkWithClient}!count@{count}}
+\index{count@{count}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily uint64\+\_\+t Work\+With\+Client\+::count (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{len,  }\item[{const uint64\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Перемножение значений вектора 
+
+Функция перемножает полученные значения и возвращает результат 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em len} & Количество перемножаемых чисел. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Вектор содержащий перемножаемые числа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Предупреждения}
+При переполнении вверх возвращается 2$^\wedge$64-\/1, при переполнении вниз возвращается 0. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Возвращает}
+Произведение чисел 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorkWithClient_ae6bfdaf5c6f03d00740c23c4629ee3ce}\label{classWorkWithClient_ae6bfdaf5c6f03d00740c23c4629ee3ce}} 
+\index{WorkWithClient@{WorkWithClient}!errrecord@{errrecord}}
+\index{errrecord@{errrecord}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{errrecord()}{errrecord()}}
+{\footnotesize\ttfamily void Work\+With\+Client\+::errrecord (\begin{DoxyParamCaption}\item[{const std\+::string}]{krit,  }\item[{const std\+::string}]{reazon }\end{DoxyParamCaption})}
+
+
+
+Запись ошибок в файл 
+
+Функция производит запись возникающих ошибок в формате \char`\"{}\textquotesingle{}дата\textquotesingle{}  \textquotesingle{}критичность\textquotesingle{} – \textquotesingle{}причина ошибки\textquotesingle{}\char`\"{} 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em krit} & Критичность ошибки. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reazon} & Причина ошибки. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWorkWithClient_af21aca3ba1cf26ed618e9e095caebf8d}\label{classWorkWithClient_af21aca3ba1cf26ed618e9e095caebf8d}} 
+\index{WorkWithClient@{WorkWithClient}!inttohex@{inttohex}}
+\index{inttohex@{inttohex}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{inttohex()}{inttohex()}}
+{\footnotesize\ttfamily string Work\+With\+Client\+::inttohex (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{decnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Преобразование числа из десятичной системы в шестнадцатеричную 
+
+Функция преобразует число в строку шестнадцатеричных цифр. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em decnum} & Число для преобразования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка из шестнадцатеричных цифр 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorkWithClient_a7bc9ae8f45d5b9f34bd122dce170f4f4}\label{classWorkWithClient_a7bc9ae8f45d5b9f34bd122dce170f4f4}} 
+\index{WorkWithClient@{WorkWithClient}!makesalt@{makesalt}}
+\index{makesalt@{makesalt}!WorkWithClient@{WorkWithClient}}
+\doxysubsubsection{\texorpdfstring{makesalt()}{makesalt()}}
+{\footnotesize\ttfamily string Work\+With\+Client\+::makesalt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Формирование случайного числа 
+
+Функция формирует строку длиной 16 со случайным шестнадцатеричным числом. Число может принимать значения от 1 до 16$^\wedge$16-\/1. Нужная длина строки достигается дополнением слева цифрами \char`\"{}0\char`\"{}. \begin{DoxyWarning}{Предупреждения}
+Для преобразования числа из десятичной системы в шестнадцатеричную используется функция inttohex. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Возвращает}
+Строка из 16 шестнадцатеричных цифр 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mdfile_8h}{mdfile.\+h}}\item 
+\mbox{\hyperlink{mdfile_8cpp}{mdfile.\+cpp}}\end{DoxyCompactItemize}
